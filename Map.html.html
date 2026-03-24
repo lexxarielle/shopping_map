@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Google Map</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load the Maps JavaScript API, replace "YOUR_API_KEY" with your actual key -->
+    <script src="https://maps.googleapis.com" defer></script>
+</head>
+<body>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112222.07519604337!2d-81.42519401941776!3d28.481358054322094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d8fecdbc77%3A0xac3b2063ca5bf9e!2sOrlando%2C%20FL!5e0!3m2!1sen!2sus!4v1774369981933!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- The map will be inserted into this div -->
+    <div id="map"></div>
+
+    <script>
+        // JavaScript function to initialize the map
+        function initMap() {
+            // The location of a specific place (e.g., New York City)
+            const position = { lat: 40.7128, lng: -74.0060 };
+            
+            // Request the map, centered at the specified position
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12, // Zoom level
+                center: position,
+            });
+
+            // Add a marker to the map
+            new google.maps.Marker({
+                position: position,
+                map: map,
+                title: "New York City",
+            });
+        }
+    </script>
+</body>
+</html>

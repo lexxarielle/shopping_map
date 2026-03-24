@@ -1,0 +1,12 @@
+/* Ensure the body and html take up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Define the size of the map container */
+#map {
+    height: 100%;
+    width: 100%;
+}
